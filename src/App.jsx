@@ -1,15 +1,15 @@
-import ItemList from "./components/ItemList";
+import React from 'react';
+import ItemList from './components/ItemList';
 
-// use the following link to get the data
-// `/doors` will give you all the doors.
-const API_URI = `https://${import.meta.env.VITE_API_URI}/doors`;
+const API_URI = 'https://jsonplaceholder.typicode.com/doors'; // Example API for practice
 
 function App() {
-  // Get the existing item from the server
-  // const [items, setItems] = useState(null);
-  // pass the item to UpdateItem as a prop
-
-  return <ItemList />;
+    return (
+        <div>
+            <h1>Item List with Delete Feature 🗑️</h1>
+            <ItemList apiUri={API_URI} />
+        </div>
+    );
 }
 
 export default App;
